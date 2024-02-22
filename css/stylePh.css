@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.book {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.pages {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.page {
+    flex: 0 0 50vw;
+    height: 100vh;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.page img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Stacking pages on top of each other */
+#page1,
+#page3,
+#page5
+#page7{
+    z-index: 2;
+}
+
+#page2,
+#page4,
+#page6 {
+    z-index: 1;
+}
+
+.double-size {
+    flex: 0 0 100vw;
+    z-index: 2;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 3; /* Set z-index higher than pages to ensure it's on top */
+}
+
+#turnForward {
+    right: 10px;
+	bottom: 30vw;
+}
+
+#turnBackward {
+    left: 10px;
+	bottom: 30vw;
+}
+.first{
+	width: 60%; position: absolute;}
+
+.p1img1 {
+  	width: 40px;  /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+}
+
+.p2img1 {
+    width: 100%; height: 100%; position: absolute; transform: scale(1.0); right: 5vw;
+}
+
+.p3img0{
+	width: 150%; position: absolute;  right: 90px;
+}
+
+
+.p3img1 {
+	width: 90%; position: absolute; top: 110px; right: 70px;
+}
+
+
+.p3img2 {
+    width: 181%;
+    position: absolute;
+    top: 200px;
+    right: 70px;
+}
+
+.cont{
+	right: -60vw;
+		top: -20vw;
+	transform: scale(0.4)
+}
+
+.p4img2 {
+    width: 30%; position: absolute; top: 33vw; right: 45vw;
+}
+
+.p4img3 {
+    width: 55%; position: absolute; top: 55vw; right: 40vw;
+}
+.lst1{
+	width: 40%; right: 49vw; position: absolute; top: 30vw;}
+.lst2{
+	width: 75%; top: 9vw; right: 11vw;  position: absolute;}
+
+.lst3{
+	width: 50%; right: 45vw; position: absolute; top: auto;  bottom: 0;
+}
+
+.p1img1ph{
+    transform: rotate(90deg); position: fixed;  top: 90vw;  align-content: center;
+}
+
+
+.logo3, .p1img1 {
+    transition: opacity 3s ease-in-out;
+}
+
+.p2img1 {
+opacity: 0.8;
+transition: opacity 3s ease-in-out;
+}
+
+
+.p3img1,.p3img2 ,.p4img1, .p4img2 {
+    transition: opacity 3s ease-in-out;
+
+}
+.p4img1{ height: 100%;}
+
+.p4img3 {
+    transition: opacity 5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.pointeroff {
+    pointer-events: none;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-30vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo3 , .logo2 {
+  animation: slideDown 2s ease-out;
+}
+
+/* CSS for opacity transition and move up animation */
+.fadeOutMoveUp {
+  animation: fadeOut 3s ease-in-out, moveUp 3s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.slide-up {
+  animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.img-zoom {
+	left: 20vw;
+    transform: scale(2.5); /* Adjust the value as needed */
+}
+
