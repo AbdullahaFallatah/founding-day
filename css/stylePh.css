@@ -99,18 +99,19 @@ button {
     right: 70px;
 }
 
-.cont{
-	right: -58vw;
-		top: -30vw;
-	transform: scale(0.3)
+.cont {
+	height: 100%;
+	right: -38vw;
+	top: -30vw;
+	transform: scaleY(1.5) scale(0.3);
 }
 
 .p4img2 {
-    width: 30%; position: absolute; top: 33vw; right: 45vw;
+    width: 30%; position: absolute; top: 33vw; right: 35vw;
 }
 
 .p4img3 {
-    width: 55%; position: absolute; top: 55vw; right: 40vw;
+    width: 45%; position: absolute; top: 55vw; right: 30vw;
 }
 .lst1{
 	width: 40%; right: 49vw; position: absolute; top: 30vw;}
@@ -140,7 +141,7 @@ transition: opacity 3s ease-in-out;
     transition: opacity 3s ease-in-out;
 
 }
-.p4img1{ height: 100%;}
+.p4img1{ height: 100%; }
 
 .p4img3 {
     transition: opacity 5s ease-in-out;
@@ -192,7 +193,8 @@ transition: opacity 3s ease-in-out;
 }
 
 .img-zoom {
-	left: 20vw;
+	left: 30vw;
+	top: -30vw;
     transform: scale(2.5); /* Adjust the value as needed */
 }
 
